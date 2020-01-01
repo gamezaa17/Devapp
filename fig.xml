@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "https://devman01.000webhostapp.com"
+    id          = "com.phonegap.example"
+    versionCode = "10"
+    version     = "1.0.1" >
+
+<!-- versionCode is optional and Android only -->
+
+  <name>DevmanApp</name>
+
+  <description>
+      Devman App IOS
+  </description>
+
+  <author href="https://devman01.000webhostapp.com" email="gamezasulove17@gmail.com">
+      Dev App
+  </author>
+
+</widget>
