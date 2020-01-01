@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Prompt&display=swap');
+
+ /* ion-col div {
+     
+     border-radius: 2px;
+     padding: 5px;
+     text-align: center;
+     
+ }
+ 
+ .box{
+     width: 300px;
+     padding: 40px;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+     text-align: center;
+ }
+ .box h1 {
+     color: white;
+     text-transform: uppercase;
+     font-weight: 500;
+ }
+ .box input[type = "text"],.box input[type = "password"]{
+     border: 0;
+     //background: none;
+     display: block;
+     margin: 20px auto;
+     text-align: center;
+     border: 1px solid #FFFFFF;
+     padding: 14px 10px;
+     width: 200px;
+     outline: none;
+     color: black;
+     border-radius: 24px;
+     transition: 0.25s;
+ }
+ .box input[type = "text"]:focus,.box input[type = "password"]:focus{
+     width: 220px;
+     border-color: rgb(25, 99, 25);
+ }
+ 
+ .buttonSub{
+     width: 300px;
+     padding: 40px;
+     position: absolute;
+     top: 80%;
+     left: 35%;
+     transform: translate(-50%,-50%);
+     text-align: left;
+ }
+ .buttonSub1{
+    width: 150px;
+    padding: 40px;
+    position: absolute;
+    top: 80%;
+    left: 80%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+
+}
+ion-content {
+    --background: linear-gradient(160deg, rgba(127,183,255,1) 0%, rgba(127,183,255,1) 50%, rgba(117,50,218,1) 100%);
+    font-family: 'Prompt', sans-serif;
+} */
+ion-content{
+    --background: #fafafa;
+    font-family: 'Prompt', sans-serif;
+  }
+  .login-header{
+    background: var(--theme-color);
+  }
+   
+  .logo-img{
+    display: block;
+    width: 120px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .ion-button-class{
+    --border-radius: 10px;
+    --padding-bottom: 10px;
+    --padding-top: 10px;
+    height: 55px;
+    --background: linear-gradient(160deg, rgba(127,183,255,1) 0%, rgba(127,183,255,1) 50%, rgba(117,50,218,1) 100%);
+    --border-radius: 50px;
+    --box-shadow: none;
+  }
+   
+  .login-header {
+      position: relative;
+      background: var(--theme-color);
+      border-radius: 0em;
+  }
+   
+   .login-header:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 15%;
+      width: 0;
+      height: 0;
+      border: 20px solid transparent;
+      border-top-color: rgba(127,183,255,1) 0%, rgba(127,183,255,1) 50%, rgba(117,50,218,1) 100%;
+      border-bottom: 0;
+      margin-left: -15px;
+      margin-bottom: -15px;
+  } 
+   
+  [big-heading]{
+    font-family: 'Prompt', sans-serif;
+    font-size: 30px !important;
+    color:var(--theme-black); 
+  }
+  [small-heading]{
+    font-family: 'Prompt', sans-serif;
+    margin-left: auto;padding-right: 40px; font-size: 15px;
+  }
+  [heading-column-lr]{
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  }
+   
+  .icon-eye{
+    color: var(--ion-color-gray);
+  }
+  [transparent]{
+    --background: transparent;
+    font-family: 'Prompt', sans-serif;
+  }
+  ion-input{
+    font-family: 'Prompt', sans-serif;
+    --color: #000;
+    --padding-bottom: 15px;
+    --padding-top: 15px;
+    --padding-start: 5px;
+    font-size: 15px;
+    text-indent: 1px;
+    padding-left: 10px !important;
+  }
+  [icon-small]{
+    width: 30px;
+  }
+  ion-item{
+    --highlight-color-focused:transparent;
+    --highlight-height:0;
+    --highlight-color-invalid:#000;
+    --highlight-color-valid:#ddd;
+    --min-height: 65px;
+    --padding-start: 0;
+  }
+  [linespace]{
+    height: 30px;
+  }
+   
+  ion-label{
+        color:#000;
+        opacity: .8;
+        font-size: 13px;
+        display: block;
+    }
+  .forget-password{
+    color: #000;
+      font-size: 13px;
+      display: block;
+      text-align: right;
+      padding: 10px;
+  }
+  .info-1 span{
+      color: blue;
+  }

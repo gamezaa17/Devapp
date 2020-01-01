@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Prompt&display=swap');
+
+ion-toolbar {
+    color: white;
+    font-family: 'Prompt', sans-serif;
+    --background: linear-gradient(90deg, rgba(127,183,255,1) 10%, rgba(117,50,218,1) 50%, rgba(127,183,255,1) 100%);
+}
+ion-card {
+    --background: linear-gradient(160deg, rgba(127,183,255,1) 0%, rgba(127,183,255,1) 35%, rgba(117,50,218,1) 100%);
+    font-family: 'Prompt', sans-serif;
+}
+ion-content {
+    font-family: 'Prompt', sans-serif;
+}
+h1 {
+    font-family: 'Prompt', sans-serif;
+    color: white; 
+}
+b {
+    color: red;
+}
+p {
+    color: white;
+}

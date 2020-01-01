@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Prompt&display=swap');
+ion-toolbar {
+    font-family: 'Prompt', sans-serif;
+    --background: linear-gradient(160deg, rgba(127,183,255,1) 0%, rgba(127,183,255,1) 35%, rgba(117,50,218,1) 100%);
+  }
+  ion-title {
+    color: white;
+  }
+  .fonts {
+    font-family: 'Prompt', sans-serif;
+}

@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar class="fonts">
+    <ion-title>ลางาน</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="tabs" ></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <!-- <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="ดึงลงเพื่อรีเฟรช"
+      refreshingSpinner="circles"
+      refreshingText="กำลังรีเฟรช...">
+    </ion-refresher-content>
+  </ion-refresher> -->
+
+  <div class="ion-padding">
+      <ion-item>
+          <ion-label position="floating" class="fonts">ชื่อ</ion-label>
+          <ion-input type="text" [(ngModel)]="postdata.staff_name" class="fonts"></ion-input>
+        </ion-item>
+  </div>
+
+<div class="ion-padding">
+  
+<!--Checkbox-->
+      <ion-list >
+        <ion-radio-group allow-empty-selection  [(ngModel)]="postdata.entry_isChecked">
+          <ion-item>
+            <ion-label class="fonts">ลาป่วย</ion-label>
+            <ion-radio slot="end" color="primary" value="ลาป่วย" ></ion-radio>
+          </ion-item>
+    
+          <ion-item>
+            <ion-label class="fonts">ลากิจ</ion-label>
+            <ion-radio slot="end" color="secondary"  value="ลากิจ"></ion-radio>
+          </ion-item>
+    
+          <ion-item>
+            <ion-label class="fonts">ลาพักร้อน</ion-label>
+            <ion-radio slot="end" color="tertiary" value="ลาพักร้อน" ></ion-radio>
+          </ion-item>
+    
+        </ion-radio-group>
+      </ion-list>
+<!--Checkbox-->
+  </div>
+
+  <div class="ion-padding">
+      <ion-item>
+          <ion-label class="fonts">ตั้งแต่วันที่</ion-label>
+          <ion-datetime displayFormat="YYYY MMM DD HH:mm:ss" placeholder="ป/ด/ว" [(ngModel)]="postdata.leave_start"></ion-datetime>
+      </ion-item>
+
+        <ion-item>
+            <ion-label class="fonts">ถึงวันที่</ion-label>
+            <ion-datetime displayFormat="YYYY MMM DD HH:mm:ss" placeholder="ป/ด/ว" [(ngModel)]="postdata.leave_stop"></ion-datetime>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label position="floating" class="fonts">*หมายเหตุ</ion-label>
+          <ion-textarea type="text" [(ngModel)]="postdata.leave_note" class="fonts"></ion-textarea>
+        </ion-item>
+</div>     
+        <ion-button class="fonts" shape="round" expand="block" (click)="onTypeleave()">ส่ง</ion-button>  
+        
+        <!-- <ion-infinite-scroll (ionInfinite)="doRefresh($event)">
+          <ion-infinite-scroll-content
+            loadingSpinner="bubbles"
+            loadingText="กำลังโหลด ...">
+          </ion-infinite-scroll-content>
+        </ion-infinite-scroll> -->
+</ion-content>

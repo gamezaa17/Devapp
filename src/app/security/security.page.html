@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>เปลี่ยนรหัสผ่าน</ion-title>
+    <ion-buttons slot="primary">
+        <ion-back-button text="Back" slot="end" color="white" defaultHref="/tabs/tab4" icon="" fill="outline"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content ion-padding>
+
+<ion-list>
+
+    <ion-item>
+      <ion-label class="font" position="floating"> รหัสผ่านเดิม </ion-label>
+      <ion-input class="font" type="password" [(ngModel)]="cusdata.con_pass"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label class="font" position="floating"> รหัสผ่านใหม่ </ion-label>
+      <ion-input class="font" type="password" [(ngModel)]="cusdata.cus_new_pass"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label class="font" position="floating"> ยืนยันรหัสผ่านใหม่ </ion-label>
+      <ion-input class="font" type="password" [(ngModel)]="cusdata.cus_confirm_pass"></ion-input>
+    </ion-item>   
+          
+
+</ion-list>
+
+  <ion-button expand="block" color="tertiary" (click)="updatePass()" fill="outline">แก้ไข</ion-button><!-- *ngIf="U_ID>=1" -->
+
+</ion-content>

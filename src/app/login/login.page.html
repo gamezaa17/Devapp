@@ -1,0 +1,74 @@
+
+
+<ion-header>
+  <div class="login-header ion-padding">
+      <img class="logo-img" src="assets/icon/icon.png">
+    </div>
+</ion-header>
+<ion-content >
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="ดึงลงเพื่อรีเฟรช"
+      refreshingSpinner="circles"
+      refreshingText="กำลังรีเฟรช...">
+    </ion-refresher-content>
+  </ion-refresher>
+    <div class="center">
+ 
+        <div heading-column-lr>
+          <h1 big-heading><b>Login</b></h1>
+          <a (click)="register()" small-heading>SIGN UP</a>
+        </div>
+     
+        <ion-label>
+          ลงชื่อเข้าใช้งาน Username&password ที่คุณได้สมัครไว้แล้ว หากยังไม่ได้สมัคร สามารถสมัครได้ภายในหน้านี้.
+        </ion-label>
+        <div linespace></div>
+     
+        <ion-item transparent>
+            <ion-icon icon-small name="person"></ion-icon>
+          <ion-input [(ngModel)]="logindata.username" placeholder="Username" type="text"></ion-input>
+        </ion-item>
+     
+     
+        <ion-item transparent>
+            <ion-icon  icon-small name="lock"></ion-icon>
+          <ion-input [(ngModel)]="logindata.pass" placeholder="Password" type="password"></ion-input>
+        </ion-item>
+        <ion-label class="forget-password">Forget Password</ion-label>
+     
+        <div linespace></div>
+     
+        <ion-button  class="ion-button-class" shape="round" fill="solid" size="large" expand="block"
+        (click)="prosesLogin()" >เข้าสู่ระบบ</ion-button>
+        <ion-label class="ion-text-center info-1">คุณยังไม่มีบัญชีใช่ไหม? <span (click)="register()">Sign Up</span>
+        </ion-label>
+     
+      </div>
+  <!-- <div class="box" >
+  <ion-grid>
+    <ion-row>
+      <ion-col>    
+      </ion-col>
+      <ion-col col-6>
+      <div><img max-height="100px" max-width="100px" src="assets/icon/icon.png"/> </div>
+      </ion-col>
+      <ion-col>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+    
+  <h1>เข้าสู่ระบบ</h1> 
+        <input type="text" [(ngModel)]="logindata.username" class="txt" placeholder="ชื่อผู้ใช้งาน...">
+        <input type="password" [(ngModel)]="logindata.pass" class="txt" placeholder="รหัสผ่าน...">
+        
+</div>
+        <div class="buttonSub">
+          <ion-button expand="block" type="submit" (click)="prosesLogin()">Login</ion-button> 
+        </div>
+        <div class="buttonSub1">
+          <ion-button expand="block" fill="clear" color="light" (click)="register()">Register</ion-button>
+        </div> -->
+
+</ion-content>

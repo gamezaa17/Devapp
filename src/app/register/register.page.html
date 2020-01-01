@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>สมัครบัญชีผู้ใช้</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="login" ></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content ion-padding>
+  
+    <ion-list>
+        <ion-item>
+          <ion-label class="fonts" position="floating">ชื่อ</ion-label>
+          <ion-input class="fonts" type="text" [(ngModel)]="u_name"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label class="fonts" position="floating">ตำแหน่ง</ion-label>
+          <ion-input class="fonts" [(ngModel)]="position"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label class="fonts" position="floating">เบอร์โทร</ion-label>
+          <ion-input class="fonts" [(ngModel)]="tell"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label class="fonts" position="floating">Username</ion-label>
+          <ion-input class="fonts" [(ngModel)]="username"></ion-input>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label class="fonts" position="floating">Password</ion-label>
+          <ion-input class="fonts" type="password" [(ngModel)]="pass"></ion-input>
+        </ion-item>  
+
+        <ion-item>
+          <ion-label class="fonts" position="floating">Confirm Password</ion-label>
+          <ion-input class="fonts" type="password" [(ngModel)]="customer_pass_con"></ion-input>
+        </ion-item>
+      </ion-list>
+
+
+<div class="ion-padding">
+      <ion-button expand="block" (click)="save()">Register</ion-button>
+</div>
+</ion-content>

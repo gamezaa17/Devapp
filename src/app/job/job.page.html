@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>งานของฉัน</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs" ></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+      <!-- <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)"> -->
+      
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="ดึงลงเพื่อรีเฟรช"
+      refreshingSpinner="circles"
+      refreshingText="กำลังรีเฟรช...">
+    </ion-refresher-content>
+  </ion-refresher>
+    <ion-card>
+        <ion-card-header>
+          <ion-card-title>งานที่ต้องทำ</ion-card-title>
+          
+        </ion-card-header>
+        <ion-card-content class="ion-padding" >
+        <p> <b>ชื่องาน :</b> {{jobdata.work_name}}</p>
+        <p> <b>สถานที่ทำงาน :</b> {{jobdata.locations}}</p>
+        <p> <b>ที่อยู่สถานที่ทำงาน :</b> {{jobdata.lo_address}}</p>
+        <p> <b>เบอร์โทรติดต่อ :</b> {{jobdata.lo_tell}}</p>
+        <p> <b>เริ่มงาน :</b> {{jobdata.work_start}}</p>
+        <p> <b>สิ้นสุดงาน :</b> {{jobdata.work_stop}}</p>
+        </ion-card-content>
+      </ion-card>
+      
+        <ion-infinite-scroll (ionInfinite)="loadJob($event)">
+          <ion-infinite-scroll-content
+            loadingSpinner="bubbles"
+            loadingText="กำลังโหลด ...">
+          </ion-infinite-scroll-content>
+        </ion-infinite-scroll>
+</ion-content>

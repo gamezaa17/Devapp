@@ -1,0 +1,14 @@
+{
+  "name": "devmanapp",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular",
+  "proxies": [
+    {
+      "path": "/server_api/proses_api.php",
+      "proxyUrl": "https://devman01.000webhostapp.com/server_api/proses_api.php"
+    }
+  ]
+}

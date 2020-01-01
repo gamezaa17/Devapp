@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>แก้ไขข้อมูลส่วนตัว</ion-title>
+    <ion-buttons slot="primary">
+        <ion-back-button text="Back" slot="end" color="white" defaultHref="/tabs/tab4" icon="" fill="outline"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content ion-padding>
+
+<ion-list>
+    <ion-item>
+      <ion-label class="font" position="floating" > ชื่อ </ion-label>
+      <ion-input class="font" type="text" [(ngModel)]="cusdata.u_name"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label class="font" position="floating"> ตำแหน่ง </ion-label>
+      <ion-input class="font" [(ngModel)]="cusdata.position"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label class="font" position="floating"> เบอร์โทรศัพท์ </ion-label>
+      <ion-input class="font" [(ngModel)]="cusdata.tell"></ion-input>
+    </ion-item>  
+
+    <ion-item>
+      <ion-label class="font" position="floating"> Username </ion-label>
+      <ion-input class="font" [(ngModel)]="cusdata.username"></ion-input>
+    </ion-item>
+
+</ion-list>
+
+  <ion-button expand="block" class="font" color="tertiary" (click)="updateProses()" fill="outline">แก้ไข</ion-button><!-- *ngIf="U_ID>=1" -->
+
+</ion-content>
+

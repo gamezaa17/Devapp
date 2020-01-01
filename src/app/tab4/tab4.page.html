@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ข้อมูลส่วนตัว</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content ion-padding>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <!-- <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)"> -->
+    
+  <ion-refresher-content
+    pullingIcon="arrow-dropdown"
+    pullingText="ดึงลงเพื่อรีเฟรช"
+    refreshingSpinner="circles"
+    refreshingText="กำลังรีเฟรช...">
+  </ion-refresher-content>
+</ion-refresher>
+
+  <ion-list >
+    <ion-item-sliding #item >
+      <ion-item>
+        <ion-icon slot="start" color="warning" name="person"></ion-icon>
+        <h3>แก้ไขข้อมูลส่วนตัว</h3>
+      </ion-item>
+
+      <ion-item-options side="end">
+        <ion-button icon-start color="primary" (click)="updateCustomer(dataitem.user_id,dataitem.u_name,dataitem.username,dataitem.position,dataitem.tell)">
+        
+          <ion-icon  name="md-create"></ion-icon>
+          แก้ไข
+        </ion-button>
+      </ion-item-options>
+      </ion-item-sliding>
+
+      <!-- <ion-item-sliding #item >
+        <ion-item>
+          <ion-icon slot="start" color="warning" name="key"></ion-icon>
+          <h3>เปลี่ยนรหัสผ่าน</h3>
+        </ion-item>
+  
+        <ion-item-options side="end">
+          <ion-button icon-start color="primary" (click)="updatePass(dataitem.user_id,dataitem.pass)">
+          
+            <ion-icon  name="md-create"></ion-icon>
+            แก้ไข
+          </ion-button>
+        </ion-item-options>
+        </ion-item-sliding> -->
+  </ion-list>
+
+  <ion-button color="danger" shape="round" fill="solid"  expand="block" (click)="Logout()">ออกจากระบบ</ion-button>
+
+  <p>Devman V 1.0.1</p>
+
+</ion-content>

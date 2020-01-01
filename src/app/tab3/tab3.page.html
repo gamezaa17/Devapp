@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ผลการอนุมัติ</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs" ></ion-back-button>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="ดึงลงเพื่อรีเฟรช"
+      refreshingSpinner="circles"
+      refreshingText="กำลังรีเฟรช...">
+    </ion-refresher-content>
+  </ion-refresher>
+    <ion-card >
+        <ion-card-header>
+          <ion-card-title>ผลอนุมัติการลางาน</ion-card-title>
+          
+        </ion-card-header>
+        <ion-card-content class="ion-padding" >
+          <div text-center padding>
+        <p>ชื่อ : {{allows.staff_name}}</p>
+        <p>ประเภทการลา : {{allows.type_leave}}</p>
+        <p>จำนวนวัน : {{allows.leave_day}}</p>
+        <p>*หมายเหตุ : {{allows.leave_note}}</p>
+        <p>....................................................</p>
+          
+        <h1>ผลการอนุมัติ : <b>{{allows.allow}}</b></h1>
+        <h1>ผู้อนุมัติ : {{allows.leave_app}}</h1>
+          
+      </div>
+        </ion-card-content>
+      </ion-card>
+      
+        <ion-infinite-scroll (ionInfinite)="loadAllow($event)">
+          <ion-infinite-scroll-content
+            loadingSpinner="bubbles"
+            loadingText="กำลังโหลด ...">
+          </ion-infinite-scroll-content>
+        </ion-infinite-scroll>
+</ion-content>
